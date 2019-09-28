@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 
 public class EscribirAleatorio {
+	
+	public static File fichero = new File("/home/pietrodeocre/eclipse/EjerciciosAD/src/Ejercicio1_3/AleatorioEmple.dat");
 
 	public static void main(String[] args) throws IOException {      
 		escribirFichero();
@@ -13,7 +15,6 @@ public class EscribirAleatorio {
 
 	public static void escribirFichero() throws FileNotFoundException, IOException {
 		
-		File fichero = new File("/home/pietrodeocre/eclipse/EjerciciosAD/src/Ejercicio1_3/AleatorioEmple.dat");
 		
 		//declara el fichero de acceso aleatorio
 		RandomAccessFile file = new RandomAccessFile(fichero, "rw");

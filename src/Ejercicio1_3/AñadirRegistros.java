@@ -13,6 +13,7 @@ import javax.lang.model.element.Element;
 import FicherosDeObjetos.Persona;
 
 public class AñadirRegistros {
+	public static File fichero = new File("/home/pietrodeocre/eclipse/EjerciciosAD/src/Ejercicio1_3/AleatorioEmple.dat");
 
 	//Atributo para guardar el ID
 	protected static Integer iD1;
@@ -45,7 +46,7 @@ public class AñadirRegistros {
 	 */
 	public static void insertaRegistro() {
 
-		File fichero = new File("/home/pietrodeocre/eclipse/EjerciciosAD/src/Ejercicio1_3/AleatorioEmple.dat");
+		
 		//declara el fichero de acceso aleatorio
 		RandomAccessFile file;
 		try {
@@ -129,7 +130,6 @@ public class AñadirRegistros {
 	 */
 	public static int LeerNumeroRegistrosFicheroAleatorio() {
 
-		File fichero = new File("/home/pietrodeocre/eclipse/EjerciciosAD/src/Ejercicio1_3/AleatorioEmple.dat");
 
 		int numRegistros = 0;
 

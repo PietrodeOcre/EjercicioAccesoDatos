@@ -9,6 +9,8 @@ import java.util.Scanner;
 
 public class LeerPersonaAleatorio {
 	
+	public static File fichero = new File("/home/pietrodeocre/eclipse/EjerciciosAD/src/Ejercicio1_3/AleatorioEmple.dat");
+	
 	//Atributo para guardar el ID
 	protected static Integer iD1;
 
@@ -20,7 +22,7 @@ public class LeerPersonaAleatorio {
 
 
 	public static void leerEmpleado() throws FileNotFoundException, IOException {
-		File fichero = new File("/home/pietrodeocre/eclipse/EjerciciosAD/src/Ejercicio1_3/AleatorioEmple.dat");
+		
 		//declara el fichero de acceso aleatorio
 		RandomAccessFile file = new RandomAccessFile(fichero, "r");
 		//declara variables para cada dato
@@ -92,7 +94,7 @@ public class LeerPersonaAleatorio {
 	 */
 	public static int LeerNumeroRegistrosFicheroAleatorio() {
 
-		File fichero = new File("/home/pietrodeocre/eclipse/EjerciciosAD/src/Ejercicio1_3/AleatorioEmple.dat");
+		
 
 		int numRegistros = 0;
 

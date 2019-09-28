@@ -11,6 +11,9 @@ import java.util.Scanner;
 
 public class ModificarDatoRegistro {
 	
+	public static File fichero = new File("/home/pietrodeocre/eclipse/EjerciciosAD/src/Ejercicio1_3/AleatorioEmple.dat");
+	
+	
 	public static Integer iD1;
 	public static Empleado empleado;
 	
@@ -36,7 +39,7 @@ public class ModificarDatoRegistro {
 	}
 	
 	public static Empleado leerEmpleado() throws FileNotFoundException, IOException {
-		File fichero = new File("/home/pietrodeocre/eclipse/EjerciciosAD/src/Ejercicio1_4/AleatorioEmple.dat");
+		
 		//declara el fichero de acceso aleatorio
 		RandomAccessFile file = new RandomAccessFile(fichero, "r");
 		
@@ -91,11 +94,11 @@ public class ModificarDatoRegistro {
 	 * Metodo para podificar un dato del fichero aleatorio
 	 */
 	public static void modificarSalario() {
-		File fichero;
+		
 		RandomAccessFile file = null;
 		int registro;
 		try {
-			fichero = new File("/home/pietrodeocre/eclipse/EjerciciosAD/src/Ejercicio1_4/AleatorioEmple.dat");
+			
 			//declara el fichero de acceso aleatorio
 			file = new RandomAccessFile(fichero, "rw");
 			//abrimos el archivo aleatorio 
@@ -156,7 +159,7 @@ public class ModificarDatoRegistro {
 	 */
 	public static int LeerNumeroRegistrosFicheroAleatorio() {
 
-		File fichero = new File("/home/pietrodeocre/eclipse/EjerciciosAD/src/Ejercicio1_4/AleatorioEmple.dat");
+		
 
 		int numRegistros = 0;
 

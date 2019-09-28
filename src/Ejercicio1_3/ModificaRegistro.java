@@ -8,6 +8,9 @@ import java.io.RandomAccessFile;
 import java.util.Scanner;
 
 public class ModificaRegistro {
+	
+	public static File fichero = new File("/home/pietrodeocre/eclipse/EjerciciosAD/src/Ejercicio1_3/AleatorioEmple.dat");
+	
 
 	//Atributo para guardar el ID
 	protected static Integer iD1;
@@ -24,11 +27,11 @@ public class ModificaRegistro {
 	 * Metodo para podificar un dato del fichero aleatorio
 	 */
 	public static void modificarSalario() {
-		File fichero;
+		
 		RandomAccessFile file = null;
 		int registro;
 		try {
-			fichero = new File("/home/pietrodeocre/eclipse/EjerciciosAD/src/Ejercicio1_3/AleatorioEmple.dat");
+			
 			//declara el fichero de acceso aleatorio
 			file = new RandomAccessFile(fichero, "rw");
 			//abrimos el archivo aleatorio 
@@ -89,7 +92,7 @@ public class ModificaRegistro {
 	 */
 	public static int LeerNumeroRegistrosFicheroAleatorio() {
 
-		File fichero = new File("/home/pietrodeocre/eclipse/EjerciciosAD/src/Ejercicio1_3/AleatorioEmple.dat");
+		
 
 		int numRegistros = 0;
 
