@@ -17,7 +17,7 @@ public class LeerPersonaAleatorio {
 		leerEmpleado();
 
 	}
-
+	//hola
 
 	public static void leerEmpleado() throws FileNotFoundException, IOException {
 		File fichero = new File("/home/pietrodeocre/eclipse/EjerciciosAD/src/Ejercicio1_4/AleatorioEmple.dat");
