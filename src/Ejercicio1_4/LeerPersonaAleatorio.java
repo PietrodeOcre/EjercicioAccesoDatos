@@ -19,8 +19,12 @@ public class LeerPersonaAleatorio {
 		leerEmpleado();
 
 	}
-	//hola que dices
+	
 
+	/*
+	 * metodo para leer el empleado
+	 */
+	
 	public static void leerEmpleado() throws FileNotFoundException, IOException {
 		
 		//declara el fichero de acceso aleatorio

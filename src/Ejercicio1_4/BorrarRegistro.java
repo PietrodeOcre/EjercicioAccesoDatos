@@ -14,13 +14,16 @@ public class BorrarRegistro {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+		//Borramos el registro
 		borraRegistro();
-		
+		//Mostramos solo los registros eliminados
 		mostrarEliminados();
 
 	}
 	
+	/*
+	 * Metodo que borra un empeado 
+	 */
 	public static void borraRegistro() {
 		
 		try {
@@ -123,6 +126,9 @@ public class BorrarRegistro {
 
 	}
 	
+	/*
+	 * Metodo que muestra todos los ID de empleados que no existen
+	 */
 	public static void mostrarEliminados() {
 		try {
 			System.out.println("");

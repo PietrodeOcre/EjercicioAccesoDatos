@@ -20,10 +20,12 @@ public class ModificarDatoRegistro {
 	public static void main(String[] args) {
 		
 		try {
+			
+			//Leemos los datos iniciales del empleado
 			leerEmpleado();
-			
+			//Imprimirmos el objeto estatico empleado
 			System.out.println(empleado.toString());
-			
+			//Modificamos el dato que se pide en el ejercicio
 			modificarSalario();
 			
 			
@@ -38,6 +40,10 @@ public class ModificarDatoRegistro {
 		
 	}
 	
+	
+	/*
+	 * Este metodo devuelve un objeto Empleado con sus atributos
+	 */
 	public static Empleado leerEmpleado() throws FileNotFoundException, IOException {
 		
 		//declara el fichero de acceso aleatorio
@@ -67,7 +73,7 @@ public class ModificarDatoRegistro {
 				salario = file.readDouble(); //obtengo salario
 
 				if(id >0) {
-					//System.out.printf("ID: %s, Apellido: %s, Departamento: %d, Salario: %.2f %n", id,   apellidos.trim(), dep, salario);     
+					//En lugar de imprimirlo lo guardamos en un objeto de tipo empleado con los mismos atributos    
 					empleado = new Empleado(id, dep, salario, apellidos.trim());
 					//int id, int dep, double salario, String apellido
 					//Se muestra los datos comletos del usuario
@@ -91,7 +97,7 @@ public class ModificarDatoRegistro {
 	}
 	
 	/*
-	 * Metodo para podificar un dato del fichero aleatorio
+	 * Metodo para podificar un dato(el salario) del fichero aleatorio
 	 */
 	public static void modificarSalario() {
 		
@@ -114,7 +120,7 @@ public class ModificarDatoRegistro {
 
 
 			long posicion = (registro -1 ) * 36; //(4+20+4+8)  modifico salario y dep
-			posicion=posicion+4+20+4; //sumo el tamaño de ID+apellido
+			posicion=posicion+4+20+4; //sumo el tamaño de ID+apellido+departamento
 			file.seek(posicion); //nos posicionamos 
 			file.writeDouble(empleado.getSalario()+empleado.getSalarioNuevo());//modif salario
 
@@ -127,7 +133,7 @@ public class ModificarDatoRegistro {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}   
-			
+			//imprimimos el nuevo salario del empleado
 			System.out.println("El salario actualizado es: "+(empleado.getSalario()+empleado.getSalarioNuevo()));
 		}
 	}
@@ -209,6 +215,9 @@ public class ModificarDatoRegistro {
 	
 }
 
+/*
+ * Clase empleado 
+ */
 class Empleado {
 
 	private int  id, dep;    
