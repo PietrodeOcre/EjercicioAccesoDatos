@@ -24,7 +24,7 @@ public class EscribirFichAleatorio {
      file.writeChars(buffer.toString());//insertar apellido
 	 file.writeInt(dep[i]);       //insertar departamento
 	 file.writeDouble(salario[i]);//insertar salario
-   }     
-   file.close();  //cerrar fichero 
+   }     //cerrar fichero 
+   file.close();  
    }
 }
