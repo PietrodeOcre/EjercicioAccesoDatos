@@ -403,10 +403,10 @@ public class LibreriaListasDinamicas {
 		}
 		return mapAux;		
 	}
-	
+	/*
 	/*
 	 * Aplicar compareTo con 3 atributos
-	 */
+	 
 	public int compareTo(Municipio o) {
 		// TODO Auto-generated method stub
 		int comparacion = this.provincia.compareTo(o.provincia);
@@ -424,7 +424,7 @@ public class LibreriaListasDinamicas {
 	
 	/*
 	 * Aplicar compareTo con 1 atributo
-	 */
+	 
 	public int compareTo(Municipio o) {
 		// TODO Auto-generated method stub
 		int comparacion = this.provincia.compareTo(o.provincia);		
@@ -433,14 +433,14 @@ public class LibreriaListasDinamicas {
 	
 	/*
 	 * Ejemplo de CompareTo con Object y orden descendente
-	 */
+	 
 	public int compareTo(Object persona) {
 		return -this.apellido.compareTo(((Persona)persona).getApellido());
 	}
 	
 	/*
 	 * Otro ejemplo de compare
-	 */
+	 
 	public int compare(Integer s1, Integer s2) {
 		
 		return s2.compareTo(s1);
@@ -448,7 +448,7 @@ public class LibreriaListasDinamicas {
 	
 	/*
 	 * Implementación de comparator en un TreeSet
-	 */
+	 
 	private static TreeSet<Integer> comparatorMetodo1() {
 		TreeSet<Integer> listaNumero = new TreeSet<Integer>(new Comparator<Integer>() {
 			@Override
@@ -462,7 +462,7 @@ public class LibreriaListasDinamicas {
 	
 	/*
 	 * Ejemplo de Equals
-	 */
+	 
 	public boolean equals(Object obj) {
 		if(
 			(obj == null) &&
@@ -478,7 +478,7 @@ public class LibreriaListasDinamicas {
 	
 	/*
 	 * Otro ejemplo de Equals
-	 */
+	 
 	public boolean equals(Object obj) {
 		if ((obj instanceof Articulo) && 
 				((Articulo)obj).ref.equals(this.ref) && 
@@ -490,9 +490,9 @@ public class LibreriaListasDinamicas {
 	
 	/*
 	 * Ejemplo de HashCode
-	 */
+	 
 	public int hashCode() {
 		return Object.hashCode();
 	}
-	
+	*/
 }
