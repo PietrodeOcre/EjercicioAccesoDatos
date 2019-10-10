@@ -27,8 +27,7 @@ public class CrearEmpleadoXml {
 		Double salario;
 		char apellido[] = new char[10], aux;
 
-		DocumentBuilderFactory factory =
-				DocumentBuilderFactory.newInstance();
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 
 		try{
 			DocumentBuilder builder = factory.newDocumentBuilder();
@@ -69,8 +68,7 @@ public class CrearEmpleadoXml {
 			}//fin del for que recorre el fichero
 
 			Source source = new DOMSource(document);
-			Result result = 
-					new StreamResult(new java.io.File("/home/pietrodeocre/eclipse/EjerciciosAD/src/Ejercicio1_7/Empleados.xml"));        
+			Result result = new StreamResult(new java.io.File("/home/pietrodeocre/eclipse/EjerciciosAD/src/Ejercicio1_7/Empleados.xml"));        
 			Transformer transformer =
 					TransformerFactory.newInstance().newTransformer();
 			transformer.transform(source, result);
@@ -82,7 +80,7 @@ public class CrearEmpleadoXml {
 
 	//Inserción de los datos del empleado
 	static void  CrearElemento(String datoEmple, String valor,
-			Element raiz, Document document){
+		Element raiz, Document document){
 		Element elem = document.createElement(datoEmple); 
 		Text text = document.createTextNode(valor); //damos valor
 		raiz.appendChild(elem); //pegamos el elemento hijo a la raiz
