@@ -79,8 +79,7 @@ public class CrearEmpleadoXml {
 	}//fin de main
 
 	//Inserción de los datos del empleado
-	static void  CrearElemento(String datoEmple, String valor,
-		Element raiz, Document document){
+	static void  CrearElemento(String datoEmple, String valor, Element raiz, Document document){
 		Element elem = document.createElement(datoEmple); 
 		Text text = document.createTextNode(valor); //damos valor
 		raiz.appendChild(elem); //pegamos el elemento hijo a la raiz
