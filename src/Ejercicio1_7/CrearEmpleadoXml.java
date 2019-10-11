@@ -32,8 +32,7 @@ public class CrearEmpleadoXml {
 		try{
 			DocumentBuilder builder = factory.newDocumentBuilder();
 			DOMImplementation implementation = builder.getDOMImplementation();
-			Document document = 
-					implementation.createDocument(null, "Empleados", null);
+			Document document = implementation.createDocument(null, "Empleados", null);
 			document.setXmlVersion("1.0"); 
 
 			for(;;) {
@@ -48,8 +47,7 @@ public class CrearEmpleadoXml {
 				salario = file.readDouble();  
 
 				if(id>0) { //id validos a partir de 1
-					Element raiz = 
-							document.createElement("empleado"); //nodo empleado
+					Element raiz = document.createElement("empleado"); //nodo empleado
 					document.getDocumentElement().appendChild(raiz); 
 
 					//añadir ID                       
@@ -69,8 +67,7 @@ public class CrearEmpleadoXml {
 
 			Source source = new DOMSource(document);
 			Result result = new StreamResult(new java.io.File("/home/pietrodeocre/eclipse/EjerciciosAD/src/Ejercicio1_7/Empleados.xml"));        
-			Transformer transformer =
-					TransformerFactory.newInstance().newTransformer();
+			Transformer transformer = TransformerFactory.newInstance().newTransformer();
 			transformer.transform(source, result);
 
 		}catch(Exception e){ System.err.println("Error: "+e); }
