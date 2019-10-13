@@ -20,7 +20,7 @@ import org.w3c.dom.Text;
 
 public class CrearEmpleadoXml {
 	public static void main(String args[]) throws IOException{
-		File fichero = new File("/home/pietrodeocre/eclipse/EjerciciosAD/src/Ejercicio1_7/AleatorioEmple.dat");   
+		File fichero = new File("/home/pietrodeocre/git/EjercicioAccesoDatos/src/Ejercicio1_7/AleatorioEmple.dat");   
 		RandomAccessFile file = new RandomAccessFile(fichero, "r");
 
 		int  id, dep, posicion=0; //para situarnos al principio del fichero        
@@ -47,6 +47,7 @@ public class CrearEmpleadoXml {
 				salario = file.readDouble();  
 
 				if(id>0) { //id validos a partir de 1
+					
 					Element raiz = document.createElement("empleado"); //nodo empleado
 					document.getDocumentElement().appendChild(raiz); 
 
@@ -66,7 +67,7 @@ public class CrearEmpleadoXml {
 			}//fin del for que recorre el fichero
 
 			Source source = new DOMSource(document);
-			Result result = new StreamResult(new java.io.File("/home/pietrodeocre/eclipse/EjerciciosAD/src/Ejercicio1_7/Empleados.xml"));        
+			Result result = new StreamResult(new java.io.File("/home/pietrodeocre/git/EjercicioAccesoDatos/src/Ejercicio1_7/Empleados.xml"));        
 			Transformer transformer = TransformerFactory.newInstance().newTransformer();
 			transformer.transform(source, result);
 

@@ -8,6 +8,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
@@ -17,8 +18,9 @@ public class LeeXMLyMuestra {
 	public static void main(String[] args) {
 		try {
 			DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-			File file = new File("/home/pietrodeocre/eclipse/EjerciciosAD/src/Ejercicio1_7/Empleados.xml");
+			File file = new File("/home/pietrodeocre/git/EjercicioAccesoDatos/src/Ejercicio1_7/Empleados.xml");
 			Document document = builder.parse(file);
+			document.getDocumentElement().normalize();
 			recorrerRamaDom(document);
 		} catch (ParserConfigurationException e) {
 			// TODO Auto-generated catch block
@@ -34,14 +36,23 @@ public class LeeXMLyMuestra {
 	}
 	
 	public static void recorrerRamaDom(Node nodo) {
-		if(nodo != null) {
-			System.out.println("Nombre del nodo: "+ nodo.getNodeName());
-			System.out.println("Valor del nodo: "+ nodo.getNodeValue());
-			NodeList hijos = nodo.getChildNodes();
-			for (int i = 0; i < hijos.getLength(); i++) {
-				Node nodoNieto = hijos.item(i);
-				System.out.println(" "+hijos.item(i).getTextContent());
-				recorrerRamaDom(nodoNieto);
+		System.out.println("Elemento raiz: "+ 
+				nodo.getNodeName());
+		//crea una lista con todos los nodos empleado  
+		NodeList empleados = ((Document) nodo).getElementsByTagName("empleado");      
+		System.out.printf("Nodos empleado a recorrer: %d %n", 
+				empleados.getLength());
+
+		//recorrer la lista  
+		for (int i = 0; i < empleados.getLength(); i ++) {
+			Node emple = empleados.item(i); //obtener un nodo empleado
+			if (emple.getNodeType() == Node.ELEMENT_NODE) {//tipo de nodo
+				//obtener los elementos del nodo           
+				Element elemento = (Element) emple;	
+				System.out.println("ID =" +elemento.getElementsByTagName("id").item(0).getTextContent());
+				System.out.println(" * Apellido = "+elemento.getElementsByTagName("nombre").item(0).getTextContent());
+				System.out.println(" * Departamento = "+elemento.getElementsByTagName("dep").item(0).getTextContent());
+				System.out.println(" * Salario = "+elemento.getElementsByTagName("salario").item(0).getTextContent());
 			}
 		}
 	}

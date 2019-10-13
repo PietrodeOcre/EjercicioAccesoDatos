@@ -18,7 +18,7 @@ public class LeerXML {
 
 		try {	 
 			DocumentBuilder builder = factory.newDocumentBuilder();
-			Document document = builder.parse(new File("/home/pietrodeocre/eclipse/EjerciciosAD/src/Ejercicio1_7/Empleados.xml"));
+			Document document = builder.parse(new File("/home/pietrodeocre/git/EjercicioAccesoDatos/src/Ejercicio1_7/Empleados.xml"));
 			document.getDocumentElement().normalize();
 
 			System.out.printf("Elemento raiz: %s %n", 
@@ -34,22 +34,14 @@ public class LeerXML {
 				if (emple.getNodeType() == Node.ELEMENT_NODE) {//tipo de nodo
 					//obtener los elementos del nodo           
 					Element elemento = (Element) emple;	
-					System.out.printf("ID = %s %n",	
-							elemento.getElementsByTagName("id").
-							item(0).getTextContent());
-					System.out.printf(" * Apellido = %s %n",
-							elemento.getElementsByTagName("apellido").
-							item(0).getTextContent());
-					System.out.printf(" * Departamento = %s %n",
-							elemento.getElementsByTagName("dep").
-							item(0).getTextContent());
-					System.out.printf(" * Salario = %s %n",
-							elemento.getElementsByTagName("salario").
-							item(0).getTextContent());
+					System.out.println("ID =" +elemento.getElementsByTagName("id").item(0).getTextContent());
+					System.out.println(" * Apellido = "+elemento.getElementsByTagName("nombre").item(0).getTextContent());
+					System.out.println(" * Departamento = "+elemento.getElementsByTagName("dep").item(0).getTextContent());
+					System.out.println(" * Salario = "+elemento.getElementsByTagName("salario").item(0).getTextContent());
 				}
 			}
 		} catch (Exception e) 
-		{e.printStackTrace();}
+		{}
 
 	}//fin de main 
 }//fin de la clase

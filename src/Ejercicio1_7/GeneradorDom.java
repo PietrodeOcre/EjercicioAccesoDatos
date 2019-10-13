@@ -24,59 +24,59 @@ public class GeneradorDom {
 	
 	private Document document;
 
-	public static void main(String[] args) throws DOMException,ParserConfigurationException, IOException, TransformerException {
-		
-		
-		GeneradorDom generadorDom = new GeneradorDom();
-		
-		generadorDom.generarDocument();
-		
-		generadorDom.generarXml();
-		
-		
+	public static void main(String[] args) {				
+		Genera();				
 	}
-	
-	public GeneradorDom() throws ParserConfigurationException{
-		
-		DocumentBuilderFactory factoria = DocumentBuilderFactory.newInstance();
-		DocumentBuilder builder = factoria.newDocumentBuilder();
-		document = builder.newDocument();
 
+	private static void Genera(){
+		GeneradorDom generadorDom = new GeneradorDom();		
+		generadorDom.generarDocument();		
+		generadorDom.generarXml();
 	}
 	
-	public void generarDocument() {
-		
+	public GeneradorDom(){
+		try {
+			DocumentBuilderFactory factoria = DocumentBuilderFactory.newInstance();
+			DocumentBuilder builder = factoria.newDocumentBuilder();
+			document = builder.newDocument();
+		}catch (ParserConfigurationException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	public void generarDocument() {		
 		Element element = document.createElement("Empleados");
-		document.appendChild(element);
-		
+		document.appendChild(element);		
 		Element nombre = document.createElement("Nombre");
-		element.appendChild(nombre);
-		
+		element.appendChild(nombre);		
 		nombre.setAttribute("id", "Manuel");
 		Element edad = document.createElement("Edad");
 		nombre.appendChild(edad);
-		
-		
-		
 	}
 
-	public void generarXml() throws IOException, TransformerException {
-		
-		TransformerFactory factoria = TransformerFactory.newInstance();
-		Transformer transformer = factoria.newTransformer();
-		
-		Source source =  new DOMSource(document);
-		
-		File file = new File("/home/pietrodeocre/eclipse/EjerciciosAD/src/Ejercicio1_7/Empleados.xml");
-		
-		FileWriter fWriter = new FileWriter(file);
-		
-		PrintWriter printWriter = new PrintWriter(fWriter);
-		
-		Result result = new StreamResult(printWriter);
-		
-		transformer.transform(source, result);
-		
+	public void generarXml(){		
+		try {
+			TransformerFactory factoria = TransformerFactory.newInstance();
+			Transformer transformer = factoria.newTransformer();
+			Source source =  new DOMSource(document);
+			PrintWriter printWriter = fichero();
+			Result result = new StreamResult(printWriter);
+			transformer.transform(source, result);
+		}catch (TransformerException ex) {			
+		}				
+	}
+
+	private PrintWriter fichero(){
+		File file=null;
+		PrintWriter printWriter = null;
+		try {
+			file = new File("/home/pietrodeocre/git/EjercicioAccesoDatos/src/Ejercicio1_7/Empleados.xml");
+			FileWriter fWriter = new FileWriter(file);
+			printWriter = new PrintWriter(fWriter);
+		}catch (IOException ex) {	
+			System.out.println(ex.getMessage());
+		}		
+		return printWriter;
 	}
 	
 	
