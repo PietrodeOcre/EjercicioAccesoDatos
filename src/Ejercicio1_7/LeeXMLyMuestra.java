@@ -16,6 +16,11 @@ import org.xml.sax.SAXException;
 public class LeeXMLyMuestra {
 
 	public static void main(String[] args) {
+		leer();
+		
+	}
+
+	public static void leer() {
 		try {
 			DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 			File file = new File("/home/pietrodeocre/git/EjercicioAccesoDatos/src/Ejercicio1_7/Empleados.xml");
@@ -32,7 +37,6 @@ public class LeeXMLyMuestra {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 	}
 	
 	public static void recorrerRamaDom(Node nodo) {
