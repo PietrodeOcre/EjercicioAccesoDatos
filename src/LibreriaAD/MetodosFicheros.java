@@ -22,6 +22,7 @@ import java.util.Set;
 import java.util.StringTokenizer;
 import java.util.TreeMap;
 import java.util.Map.Entry;
+import java.util.Scanner;
 
 public class MetodosFicheros {
 
@@ -624,5 +625,36 @@ public class MetodosFicheros {
 		
 	}
 	
+	/*
+	 * Metodo para renombrar un archivo le damos un fichero
+	 * y nos pregunta el nuevo nombre por consola 
+	 */
+	private static void renombraArchivo(File fil) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Escribe el nuevo nombre con su extensión: ");
+		String nombre = scanner.nextLine();
+		File f2 = new File(fil.getParentFile()+"/"+nombre);
+		fil.renameTo(f2);
+	}
+	
+	/*
+	 * Muestra la informacion de un fichero
+	 * dado mediante File
+	 */
+	private static void infoArchivo(File file) {
+		System.out.println("INFORMACIÓN SOBRE EL FICHERO:");  
+		  if(file.exists()){
+		        System.out.println("Nombre del fichero  : "+file.getName());
+		        System.out.println("Ruta                : "+file.getPath());
+		        System.out.println("Ruta absoluta       : "+file.getAbsolutePath());
+		        System.out.println("Solo ruta de archivo: "+file.getParentFile());
+		        System.out.println("Se puede leer       : "+file.canRead());
+		        System.out.println("Se puede escribir   : "+file.canWrite());
+		        System.out.println("Tamaño              : "+file.length());
+				System.out.println("Es un directorio    : "+file.isDirectory()); 
+				System.out.println("Es un fichero       : "+file.isFile());
+				System.out.println("Nombre del directorio padre: "+file.getParent());
+		  }
+	}
 	
 }
