@@ -16,6 +16,8 @@ public class LeerFichTexto {
     while ((i = fic.read()) != -1) //se va leyendo un car�cter
       System.out.println( (char) i + "==>"+ i);
     
+    
+    
   /*  char b[]= new char[5]; 
     while ((i = fic.read(b)) != -1)	    
 		System.out.println(b); 
