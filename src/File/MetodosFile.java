@@ -13,9 +13,9 @@ public class MetodosFile {
 
 		//Instanciamos un objeto f de tipo File 
 		//para poder hubicar el path absoluto 
-		File f = new File("/home/pietrodeocre/Documentos/GradoSuperior/2DAM/AD/Tema1/Ejercicio2/");//Instanciamos un objeto f de tipo File para poder hubicar el path absoluto 
+		File f = new File("/home/pietrodeocre/git/EjercicioAccesoDatos/FichPersona.dat");//Instanciamos un objeto f de tipo File para poder hubicar el path absoluto 
 	    
-		//metodoFile(f);
+		metodoFile(f);
 		
 		
 		
