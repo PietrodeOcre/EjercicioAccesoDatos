@@ -1,12 +1,9 @@
 package Hibernate1;
 
 import java.io.Serializable;
-import org.hibernate.annotations;
 
 
-@Entity
-@Table(name="Empleados")
-public class Empleado implements Serializable {
+public class Emp implements Serializable {
 	
 	/*
 	 * <id column="emp_no" name="emp_no" type="integer"/>
@@ -18,21 +15,24 @@ public class Empleado implements Serializable {
     <id column="comision" name="comision" type="float"/>
     <id column="dep_no" name="dep_no" type="integer"/>
 	 */
-	
-	@Id
-	@Column(name="emp_no")
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private int emp_no;
-	@Column(name="dep_no")
+
 	private int dep_no;
-	@Column(name="apellido")
+
 	private String apellido;
-	@Column(name="oficio")
+
 	private String oficio;
-	@Column(name="dir")
+
 	private String dir;
-	@Column(name="salario")
+
 	private float salario;
-	@Column(name"comision")
+
 	private float comision;
 	public int getEmp_no() {
 		return emp_no;
@@ -77,11 +77,11 @@ public class Empleado implements Serializable {
 		this.comision = comision;
 	}
 	
-	public Empleado() {
+	public Emp() {
 		
 	}
 	
-	public Empleado(int emp_no, int dep_no, String apellido, String oficio, String dir, float salario, float comision) {
+	public Emp(int emp_no, int dep_no, String apellido, String oficio, String dir, float salario, float comision) {
 		super();
 		this.emp_no = emp_no;
 		this.dep_no = dep_no;
@@ -98,6 +98,12 @@ public class Empleado implements Serializable {
 	}
 	
 	
-	
+	public static void main(String[] args) {
+		Emp[] list = new Emp[4];
+		for (int i = 0; i < list.length; i++) {
+			System.out.println(list[i].toString());
+		}
+		
+	}
 	
 }

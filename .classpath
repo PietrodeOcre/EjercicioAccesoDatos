@@ -2,7 +2,7 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry excluding="ConectorDaseDatos/" kind="src" path="src"/>
-	<classpathentry kind="lib" path="/home/pietrodeocre/Documentos/GradoSuperior/2DAM/AD/Tema1/Embebidas/sqlite-jdbc-3.27.2.1.jar"/>
 	<classpathentry kind="lib" path="/home/pietrodeocre/Documentos/GradoSuperior/2DAM/AD/Eval1/Tema1/Conectores/drive-download-20191106T191010Z-001/mysql-connector-java-8.0.16.jar"/>
+	<classpathentry kind="lib" path="src/Hibernate1/mysql-connector-java-5.1.38-bin.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
