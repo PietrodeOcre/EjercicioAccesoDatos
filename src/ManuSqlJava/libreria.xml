@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Catálogo>
+<libro id="A0001">
+<autor>Tom Sharpe</autor>
+<título>Wilt</título>
+<género>Comedia</género>
+<precio>90</precio>
+<fecha>21/11/2013</fecha>
+<descripción>Pura ironía</descripción>
+</libro>
+
+<libro id="A0002">
+<autor>Juan Rulfo</autor>
+<título>Pedro Páramo</título>
+<género>Realismo</género>
+<precio>20</precio>
+<fecha>21/12/2016</fecha>
+<descripción>Realismo mágico</descripción>
+</libro>
+
+<libro id="A0003">
+<autor>García Márquez</autor>
+<título>La hojarasca</título>
+<género>Realismo</género>
+<precio>0.5</precio>
+<fecha>30/09/2016</fecha>
+<descripción>Realismo mágico</descripción>
+</libro>
+
+<libro id="A0004">
+<autor>E. Salgari</autor>
+<título>El corsario</título>
+<género>Aventuras</género>
+<precio>19</precio>
+<fecha>12/03/2015</fecha>
+<descripción>Piratas</descripción>
+</libro>
+
+<libro id="A0005">
+<autor>C. Dikens</autor>
+<título>Oliver Twist</título>
+<género>Drama</género>
+<precio>40</precio>
+<fecha>20/07/2012</fecha>
+<descripción>Una triste historia</descripción>
+</libro>
+
+<libro id="A0006">
+<autor>E. A. Poe</autor>
+<título>El gato negro</título>
+<género>Terror</género>
+<precio>99</precio>
+<fecha>30/02/2015</fecha>
+<descripción>Relato corto</descripción>
+</libro>
+
+<libro id="A0007">
+<autor>C. Dikens</autor>
+<título>D. Copperfield</título>
+<género>Drama</género>
+<precio>20</precio>
+<fecha>09/01/2012</fecha>
+<descripción>Niño protagonista</descripción>
+</libro>
+
+<libro id="A0008">
+<autor>H. James</autor>
+<título>Vuelta tuerca</título>
+<género>Terror</género>
+<precio>80</precio>
+<fecha>03/02/2016</fecha>
+<descripción>Miedo asegurado</descripción>
+</libro>
+
+<libro id="A0009">
+<autor>Woody Allen</autor>
+<título>Cuentos s pluma</título>
+<género>Comedia</género>
+<precio>12</precio>
+<fecha>02/07/1998</fecha>
+<descripción>Para reir sin parar</descripción>
+</libro>
+
+<libro id="A0010">
+<autor>E. Salgari</autor>
+<título>Los dos tigres</título>
+<género>Aventuras</género>
+<precio>49</precio>
+<fecha>21/11/2017</fecha>
+<descripción>En la India</descripción>
+</libro>
+</Catálogo>

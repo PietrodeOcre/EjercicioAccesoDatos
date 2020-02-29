@@ -42,13 +42,13 @@ public class CrearEmpleadoXml {
                    document.createElement("empleado"); //nodo empleado
          document.getDocumentElement().appendChild(raiz); 
         
-         //a�adir ID                       
+         //aniadir ID                       
          CrearElemento("id",Integer.toString(id), raiz, document); 
          //Apellido
          CrearElemento("apellido",apellidos.trim(), raiz, document); 
-         //a�adir DEP
+         //aniadir DEP
          CrearElemento("dep",Integer.toString(dep), raiz, document); 
-         //a�adir salario
+         //aniadir salario
          CrearElemento("salario",Double.toString(salario), raiz,
                                                           document); 
 	 }	
