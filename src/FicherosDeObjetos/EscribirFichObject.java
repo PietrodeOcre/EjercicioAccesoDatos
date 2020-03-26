@@ -4,7 +4,7 @@ package FicherosDeObjetos;
 
 import java.io.*;
 
-import com.sun.media.jfxmedia.events.NewFrameEvent;
+
 
 public class EscribirFichObject {
 	public static void main(String[] args) throws IOException {   

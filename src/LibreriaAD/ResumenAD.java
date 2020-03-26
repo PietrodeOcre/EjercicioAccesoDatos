@@ -2,7 +2,7 @@ package LibreriaAD;
 
 import java.io.*;
 
-import com.sun.media.jfxmedia.events.NewFrameEvent;
+
 
 public class ResumenAD {
 

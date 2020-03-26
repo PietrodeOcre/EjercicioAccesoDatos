@@ -13,8 +13,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 import com.microsoft.sqlserver.jdbc.*;
-import com.sun.glass.ui.TouchInputSupport;
-import com.sun.media.jfxmedia.events.NewFrameEvent;
+
 
 public class SqlServerCrud {
 	
